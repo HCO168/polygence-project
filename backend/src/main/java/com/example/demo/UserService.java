@@ -1,0 +1,38 @@
+package com.example.demo;
+
+import com.example.demo.dto.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+public class UserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Transactional
+    public boolean createUser(User user) {
+        if(userRepository.existsById(user.getUsername())){
+            return false;
+        }else{
+            userRepository.save(user);
+            return true;
+        }
+    }
+    @Transactional
+    public User getUser(String username) {
+        return userRepository.findByUsername(username);
+    }
+    @Transactional
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+    @Transactional
+    public void deleteUser(String username) {
+        // Business logic to delete a user
+        userRepository.deleteUserByUsername(username);
+    }
+}
