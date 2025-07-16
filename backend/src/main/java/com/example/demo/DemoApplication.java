@@ -9,6 +9,7 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		UserController userController=new UserController();
+		System.out.println("hello");
 	}
 
 }
