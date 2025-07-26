@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		UserController userController=new UserController();
-		System.out.println("hello");
+		SpringApplication.run(DemoApplication.class, args);
+
 	}
 
 }

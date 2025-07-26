@@ -9,7 +9,7 @@ public class User{
     private String username;
     @Column(name = "firstname", nullable = true)
     private String firstName;
-    @Column(name = "lastName", nullable = true)
+    @Column(name = "lastname", nullable = true)
     private String lastName;
 
     public String getFirstName(){
