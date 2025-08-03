@@ -27,7 +27,6 @@ public class UserService {
     }
     @Transactional
     public User getUser(String username) {
-        log("trying to get user by username: " + username);
         return userRepository.findByUsername(username);
     }
     @Transactional

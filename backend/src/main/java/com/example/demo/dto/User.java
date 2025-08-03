@@ -4,7 +4,12 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
+
 public class User{
+    public User(){
+
+    }
+
     @Id
     private String username;
     @Column(name = "firstname", nullable = true)
@@ -34,5 +39,9 @@ public class User{
 
     public void setUsername(String username){
         this.username=username;
+    }
+    //serialized output text SOT
+    public String toString(){
+        return  "User{username="+username+",firstName="+firstName+",lastname="+lastName+"}";
     }
 }
