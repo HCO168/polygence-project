@@ -13,7 +13,7 @@ public class TranslateController {
     private WordService wordService;
     @GetMapping("/def/{word}")
     public Mono<DictionaryResponse> getDefinition(@PathVariable String word){
-        return wordService.getDefinition(word);
+        return wordService.getDefinitionFromInternet(word);
     }
 
 }
