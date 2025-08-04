@@ -1,22 +1,25 @@
-import React, { Component } from 'react';
 import './App.css';
-import Home from './Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import UserList from './UserList';
-import UserEdit from "./UserEdit";
+import React from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import UserList from "./pages/UserList";
+import UserEdit from "./pages/UserEdit";
 
-class App extends Component {
-  render() {
-    return (
-        <Router>
-          <Switch>
-            <Route path='/' exact={true} component={Home}/>
-            <Route path='/users' exact={true} component={UserList}/>
-            <Route path='/users/:username' component={UserEdit}/>
-          </Switch>
-        </Router>
-    )
-  }
+
+class App extends React.Component {
+    render() {
+        return (
+            <div className="App">
+                <BrowserRouter>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route exact path='/users' element={<UserList />}/>
+                        <Route path='/users/:username' element={<UserEdit />}/>
+                    </Routes>
+                </BrowserRouter>
+            </div>
+        );
+    }
 }
 
 export default App;
