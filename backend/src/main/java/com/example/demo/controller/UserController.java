@@ -1,11 +1,14 @@
 package com.example.demo.controller;
 
+import com.example.demo.Logger;
 import com.example.demo.dto.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static com.example.demo.Logger.log;
 
 @RestController
 @RequestMapping("/users")
@@ -14,18 +17,28 @@ public class UserController{
     private UserService userService;
     @PostMapping
     public boolean addUser(@RequestBody User newUser){
-        return userService.createUser(newUser);
+        boolean result= userService.createUser(newUser);
+        log("add user:"+newUser.toString()+(result?"success":"fail"));
+        return result;
     }
     @GetMapping
     public List<User> getAllUsers(){
-        return userService.getAllUsers();
+        List<User> result= userService.getAllUsers();
+        log("getAllUsers result:{");
+        result.forEach((user)->{log(user.toString());});
+        log("}");
+        return result;
     }
     @GetMapping("/{username}")
     public User getUser(@PathVariable String username){
-        return userService.getUser(username);
+        log("Try get user by username:"+username);
+        User result= userService.getUser(username);
+        log("Result:" + username+(result==null?"{no such user}":result.toString()));
+        return result;
     }
     @DeleteMapping("/{username}")
     public void deleteUser(@PathVariable String username){
+        log("Try delete by username: " + username);
         userService.deleteUser(username);
     }
 }
