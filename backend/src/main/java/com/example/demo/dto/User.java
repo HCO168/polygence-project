@@ -12,9 +12,9 @@ public class User{
 
     @Id
     private String username;
-    @Column(name = "firstname", nullable = true)
+    @Column(name = "firstname")
     private String firstName;
-    @Column(name = "lastname", nullable = true)
+    @Column(name = "lastname")
     private String lastName;
 
     public String getFirstName(){
