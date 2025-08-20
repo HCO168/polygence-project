@@ -1,7 +1,5 @@
-package com.example.demo.repository;
+package rubish;
 
-import com.example.demo.dto.User;
-import com.example.demo.entities.DefinitionData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

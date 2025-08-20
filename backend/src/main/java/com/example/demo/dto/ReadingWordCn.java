@@ -11,6 +11,15 @@ public class ReadingWordCn {
     private List<Exchange> exchanges;
     private char currentType;//is this word original or other
 
+    public String getBaseForm(){
+        for(Exchange exchange:this.exchanges){
+            if(exchange.getType()=='0'){
+                return exchange.getWord();
+            }
+        }
+        return this.word;
+    }
+
     public String getWord() {
         return word;
     }

@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
+import java.time.Instant;
 import java.util.List;
 
 public interface FamiliarityRepository extends JpaRepository<FamiliarityData, FamiliarityKey> {
@@ -17,6 +18,6 @@ public interface FamiliarityRepository extends JpaRepository<FamiliarityData, Fa
     @Transactional
     @Query("UPDATE FamiliarityData w SET w.familiarity = :familiarity, w.last_quizzed = :last_quizzed " +
             "WHERE w.username = :username AND w.word = :word")
-    int updateFamiliarityAndLast_quizzedByUsernameAndWord(String username, String word, String familiarity, String last_quizzed);
-
+    void updateFamiliarityAndLast_quizzedByUsernameAndWord(String username, String word, Integer familiarity, Instant last_quizzed);
+    void
 }

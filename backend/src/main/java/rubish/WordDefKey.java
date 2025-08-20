@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package rubish;
 
 import java.util.Objects;
 

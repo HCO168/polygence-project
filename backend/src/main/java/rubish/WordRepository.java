@@ -1,6 +1,5 @@
-package com.example.demo.repository;
+package rubish;
 
-import com.example.demo.entities.WordData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

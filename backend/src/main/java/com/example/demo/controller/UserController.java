@@ -11,8 +11,9 @@ import java.util.List;
 import static com.example.demo.Logger.log;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController{
+    private static final String PASSWORD="AdministratorPassword";
     @Autowired
     private UserService userService;
     @PostMapping
@@ -37,8 +38,12 @@ public class UserController{
         return result;
     }
     @DeleteMapping("/{username}")
-    public void deleteUser(@PathVariable String username){
-        log("Try delete by username: " + username);
-        userService.deleteUser(username);
+    public void deleteUser(@PathVariable String username,@RequestParam String password){
+        if(password.equals(PASSWORD)){
+            log("Try delete by username: " + username);
+            userService.deleteUser(username);
+        }else{
+
+        }
     }
 }

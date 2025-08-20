@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import UserList from "./pages/UserList";
 import UserEdit from "./pages/UserEdit";
+import Definition from "./pages/Definition";
 
 
 class App extends React.Component {
@@ -13,8 +14,9 @@ class App extends React.Component {
                 <BrowserRouter>
                     <Routes>
                         <Route exact path="/" element={<Home />} />
-                        <Route exact path='/users' element={<UserList />}/>
-                        <Route path='/users/:username' element={<UserEdit />}/>
+                        <Route exact path='/UserList' element={<UserList />}/>
+                        <Route exact path='/UserEdit' element={<UserEdit />}/>
+                        <Route exact path='/Definition' element={<Definition/>}/>
                     </Routes>
                 </BrowserRouter>
             </div>
