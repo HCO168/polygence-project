@@ -3,9 +3,16 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>ymd</DateStyle>
-      <IntrospectionStateNumber>930</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
       <ServerVersion>17.5</ServerVersion>
-      <StartupTime>1753989402</StartupTime>
+      <StartupTime>1755546448</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -790,21 +797,7 @@ false Z
 false Zulu
 </TimeZones>
     </root>
-    <database id="2" parent="1" name="easymean">
-      <Grants>11||10|C|G
-11||-9223372036854775808|U|G
-11||10|U|G
-2200||6171|C|G
-2200||-9223372036854775808|U|G
-2200||6171|U|G
-14751||10|C|G
-14751||-9223372036854775808|U|G
-14751||10|U|G</Grants>
-      <IntrospectionStateNumber>886</IntrospectionStateNumber>
-      <ObjectId>16388</ObjectId>
-      <OwnerName>postgres</OwnerName>
-    </database>
-    <database id="3" parent="1" name="postgres">
+    <database id="2" parent="1" name="postgres">
       <Comment>default administrative connection database</Comment>
       <Current>1</Current>
       <Grants>11||10|C|G
@@ -816,57 +809,69 @@ false Zulu
 14751||10|C|G
 14751||-9223372036854775808|U|G
 14751||10|U|G</Grants>
-      <IntrospectionStateNumber>930</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="4" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
-    </role>
-    <role id="5" parent="1" name="pg_create_subscription">
-      <ObjectId>6304</ObjectId>
-    </role>
-    <role id="6" parent="1" name="pg_database_owner">
+    <database id="3" parent="1" name="easymean">
+      <Grants>11||10|C|G
+11||-9223372036854775808|U|G
+11||10|U|G
+2200||6171|C|G
+2200||-9223372036854775808|U|G
+2200||6171|U|G
+14751||10|C|G
+14751||-9223372036854775808|U|G
+14751||10|U|G</Grants>
+      <ObjectId>16388</ObjectId>
+      <OwnerName>postgres</OwnerName>
+    </database>
+    <role id="4" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="7" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
+    <role id="5" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
     </role>
-    <role id="8" parent="1" name="pg_maintain">
-      <ObjectId>6337</ObjectId>
+    <role id="6" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_monitor">
+    <role id="7" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <RoleGrants>3374
 3375
 3377</RoleGrants>
     </role>
-    <role id="10" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
-    </role>
-    <role id="11" parent="1" name="pg_read_all_settings">
+    <role id="8" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_read_all_stats">
+    <role id="9" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="13" parent="1" name="pg_read_server_files">
+    <role id="10" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="11" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
+    </role>
+    <role id="12" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+    </role>
+    <role id="13" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
     <role id="14" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="15" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
+    <role id="15" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
     </role>
-    <role id="16" parent="1" name="pg_use_reserved_connections">
+    <role id="16" parent="1" name="pg_maintain">
+      <ObjectId>6337</ObjectId>
+    </role>
+    <role id="17" parent="1" name="pg_use_reserved_connections">
       <ObjectId>4550</ObjectId>
     </role>
-    <role id="17" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
-    </role>
-    <role id="18" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
+    <role id="18" parent="1" name="pg_create_subscription">
+      <ObjectId>6304</ObjectId>
     </role>
     <role id="19" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4238,8 +4243,7 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>886</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-08-04.01:11:40</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-08-18.01:12:49</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -7595,122 +7599,115 @@ false Zulu
     <schema id="509" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>930</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-08-04.19:29:26</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-08-04.01:11:40</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <table id="510" parent="265" name="ecdict">
+    <table id="510" parent="509" name="ecdict">
       <ObjectId>16460</ObjectId>
       <StateNumber>885</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="511" parent="265" name="familiarity">
+    <table id="511" parent="509" name="familiarity">
       <ObjectId>16428</ObjectId>
-      <StateNumber>893</StateNumber>
+      <StateNumber>947</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="512" parent="265" name="not_word">
-      <ObjectId>16423</ObjectId>
-      <StateNumber>824</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="513" parent="265" name="users">
+    <table id="512" parent="509" name="users">
       <ObjectId>16389</ObjectId>
       <StateNumber>782</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="514" parent="265" name="words">
+    <table id="513" parent="509" name="words">
       <ObjectId>16401</ObjectId>
       <StateNumber>926</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="515" parent="510" name="word">
+    <column id="514" parent="510" name="word">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="516" parent="510" name="phonetic">
+    <column id="515" parent="510" name="phonetic">
       <Position>2</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="517" parent="510" name="definition">
+    <column id="516" parent="510" name="definition">
       <Position>3</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="518" parent="510" name="translation">
+    <column id="517" parent="510" name="translation">
       <Position>4</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="519" parent="510" name="pos">
+    <column id="518" parent="510" name="pos">
       <Position>5</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="520" parent="510" name="collins">
+    <column id="519" parent="510" name="collins">
       <Position>6</Position>
       <StateNumber>885</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="521" parent="510" name="oxford">
+    <column id="520" parent="510" name="oxford">
       <Position>7</Position>
       <StateNumber>885</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="522" parent="510" name="tag">
+    <column id="521" parent="510" name="tag">
       <Position>8</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="523" parent="510" name="bnc">
+    <column id="522" parent="510" name="bnc">
       <Position>9</Position>
       <StateNumber>885</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="524" parent="510" name="frq">
+    <column id="523" parent="510" name="frq">
       <Position>10</Position>
       <StateNumber>885</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="525" parent="510" name="exchange">
+    <column id="524" parent="510" name="exchange">
       <Position>11</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="526" parent="510" name="detail">
+    <column id="525" parent="510" name="detail">
       <Position>12</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="527" parent="510" name="audio">
+    <column id="526" parent="510" name="audio">
       <Position>13</Position>
       <StateNumber>885</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <index id="528" parent="510" name="ecdict_pkey">
+    <index id="527" parent="510" name="ecdict_pkey">
       <ColNames>word</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16465</ObjectId>
@@ -7722,26 +7719,33 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="529" parent="510" name="ecdict_pkey">
+    <key id="528" parent="510" name="ecdict_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16466</ObjectId>
       <Primary>1</Primary>
       <StateNumber>885</StateNumber>
       <UnderlyingIndexId>16465</UnderlyingIndexId>
     </key>
+    <key id="529" parent="510" name="ecdict_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24606</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>934</StateNumber>
+      <UnderlyingIndexId>24605</UnderlyingIndexId>
+    </key>
     <column id="530" parent="511" name="username">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>928</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
+      <StateNumber>945</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
     </column>
     <column id="531" parent="511" name="word">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>928</StateNumber>
-      <StoredType>text|0s</StoredType>
-      <TypeId>25</TypeId>
+      <StateNumber>946</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
     </column>
     <column id="532" parent="511" name="familiarity">
       <Position>4</Position>
@@ -7757,72 +7761,53 @@ false Zulu
     </column>
     <column id="534" parent="511" name="context">
       <Position>6</Position>
-      <StateNumber>836</StateNumber>
-      <StoredType>text|0s</StoredType>
-      <TypeId>25</TypeId>
+      <StateNumber>947</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="535" parent="511" name="word_id">
-      <Position>7</Position>
-      <StateNumber>893</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <index id="536" parent="511" name="pk_familiarity">
+    <index id="535" parent="511" name="pk_familiarity">
       <ColNames>username
 word</ColNames>
-      <ObjectId>16497</ObjectId>
+      <ObjectId>24754</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>928</StateNumber>
+      <StateNumber>947</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
-      <CollationIds>
+      <CollationIds>100
 100</CollationIds>
-      <CollationParentNames>
-pg_catalog</CollationParentNames>
-      <CollationNames>
+      <CollationNames>default
 default</CollationNames>
+      <CollationParentNames>pg_catalog
+pg_catalog</CollationParentNames>
     </index>
-    <key id="537" parent="511" name="pk_familiarity">
-      <ObjectId>16498</ObjectId>
+    <key id="536" parent="511" name="pk_familiarity">
+      <ObjectId>24755</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>928</StateNumber>
-      <UnderlyingIndexId>16497</UnderlyingIndexId>
+      <StateNumber>946</StateNumber>
+      <UnderlyingIndexId>24754</UnderlyingIndexId>
     </key>
-    <column id="538" parent="512" name="word">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>824</StateNumber>
-      <StoredType>text|0s</StoredType>
-      <TypeId>25</TypeId>
-    </column>
-    <column id="539" parent="512" name="last_visit">
-      <Position>2</Position>
-      <StateNumber>824</StateNumber>
-      <StoredType>timestamp|0s</StoredType>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="540" parent="513" name="username">
+    <column id="537" parent="512" name="username">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>781</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="541" parent="513" name="firstname">
+    <column id="538" parent="512" name="firstname">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>782</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="542" parent="513" name="lastname">
+    <column id="539" parent="512" name="lastname">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>783</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="543" parent="513" name="users_pk">
+    <index id="540" parent="512" name="users_pk">
       <ColNames>username</ColNames>
       <ObjectId>16397</ObjectId>
       <Primary>1</Primary>
@@ -7833,51 +7818,51 @@ default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="544" parent="513" name="users_pk">
+    <key id="541" parent="512" name="users_pk">
       <ObjectId>16398</ObjectId>
       <Primary>1</Primary>
       <StateNumber>781</StateNumber>
       <UnderlyingIndexId>16397</UnderlyingIndexId>
     </key>
-    <column id="545" parent="514" name="word">
+    <column id="542" parent="513" name="word">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>821</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="546" parent="514" name="phonetic_0">
+    <column id="543" parent="513" name="phonetic_0">
       <Position>2</Position>
       <StateNumber>915</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="547" parent="514" name="last_visit">
+    <column id="544" parent="513" name="last_visit">
       <Position>3</Position>
       <StateNumber>827</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="548" parent="514" name="word_id">
+    <column id="545" parent="513" name="word_id">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>903</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="549" parent="514" name="phonetic_1">
+    <column id="546" parent="513" name="phonetic_1">
       <Position>6</Position>
       <StateNumber>912</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="550" parent="514" name="definitions">
+    <column id="547" parent="513" name="definitions">
       <Position>7</Position>
       <StateNumber>926</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <index id="551" parent="514" name="words_pkey">
+    <index id="548" parent="513" name="words_pkey">
       <ColNames>word
 word_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -7890,12 +7875,19 @@ word_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="552" parent="514" name="words_pkey">
+    <key id="549" parent="513" name="words_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16482</ObjectId>
       <Primary>1</Primary>
       <StateNumber>903</StateNumber>
       <UnderlyingIndexId>16481</UnderlyingIndexId>
+    </key>
+    <key id="550" parent="513" name="words_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24769</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>949</StateNumber>
+      <UnderlyingIndexId>24768</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

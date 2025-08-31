@@ -1,28 +1,66 @@
 package com.example.demo.entities;
 
 
+import com.example.demo.dto.ReadingWordCn;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //https://github.com/skywind3000/ECDICT in chinese
 @Entity
 @Table(name = "ecdict")
 public class EcdictWord {
+
+    public ReadingWordCn toReadingWordCn(){
+        ReadingWordCn readingWordCn = new ReadingWordCn();
+        readingWordCn.setWord(word);
+        readingWordCn.setDefinition(this.getDefinition());
+        readingWordCn.setTranslation(this.getTranslation());
+        readingWordCn.setFrq(this.getFrq());
+        readingWordCn.setPhonetic(this.getPhonetic());
+        String[] exchanges;
+        if(this.getExchange() != null){
+            exchanges=this.getExchange().split("/");
+        }else{
+            exchanges=new String[0];
+        }
+        List<ReadingWordCn.Exchange> exchangesList = new ArrayList<>();
+        readingWordCn.setCurrentType('0');
+        for(String exchange:exchanges){
+            String[] parts=exchange.split(":");
+            if(parts.length==2){
+                if(parts[0].equals("1")){
+                    readingWordCn.setCurrentType(parts[1].charAt(0));
+                }else{
+                    exchangesList.add(new ReadingWordCn.Exchange(parts[0].charAt(0),parts[1]));
+                }
+            }
+        }
+        readingWordCn.setExchanges(exchangesList);
+        return readingWordCn;
+    }
+
+
     @Id
     private String word;
     private String phonetic;
+    @Column(columnDefinition = "text")
     private String definition;
     private String translation;
     private String pos;
-    private int collins;
-    private int oxford;
+    private Integer collins;
+    private Integer oxford;
     private String tag;
-    private int bnc;
+    private Integer bnc;
     private String frq;
     private String exchange;
     private String detail;
     private String audio;
+
 
     public EcdictWord() {
 
@@ -68,19 +106,19 @@ public class EcdictWord {
         this.translation = translation;
     }
 
-    public int getCollins() {
+    public Integer getCollins() {
         return collins;
     }
 
-    public void setCollins(int collins) {
+    public void setCollins(Integer collins) {
         this.collins = collins;
     }
 
-    public int getOxford() {
+    public Integer getOxford() {
         return oxford;
     }
 
-    public void setOxford(int oxford) {
+    public void setOxford(Integer oxford) {
         this.oxford = oxford;
     }
 
@@ -92,11 +130,11 @@ public class EcdictWord {
         this.tag = tag;
     }
 
-    public int getBnc() {
+    public Integer getBnc() {
         return bnc;
     }
 
-    public void setBnc(int bnc) {
+    public void setBnc(Integer bnc) {
         this.bnc = bnc;
     }
 

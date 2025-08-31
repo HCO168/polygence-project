@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package rubish;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

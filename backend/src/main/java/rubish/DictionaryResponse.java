@@ -1,6 +1,4 @@
-package com.example.demo.dto;
-
-import com.example.demo.entities.WordData;
+package rubish;
 
 import java.util.List;
 

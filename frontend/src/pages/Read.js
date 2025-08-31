@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TopBar from "./components/TopBar";
 import LoginCard from "./components/LoginCard";
 
-class Home extends Component {
+class Read extends Component {
     render() {
         return (
             <div>
