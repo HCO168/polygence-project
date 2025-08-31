@@ -20,6 +20,21 @@ public class ReadingWordCn {
         return this.word;
     }
 
+    /**
+     *
+     * @param word
+     * @return is the word only contain base form reference.
+     * However, if contains other forms, consider not base form(like lay)
+     */
+    public boolean isBaseForm(String word){
+        for(Exchange exchange:this.exchanges){
+            if(exchange.getType()!='0'){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public String getWord() {
         return word;
     }

@@ -5,46 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="addf67e2-0d77-49e0-834b-09d27409482d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/service/FamiliarityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/res/top/topLeftTitle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Definition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Read.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/LoginCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/TitleLeft.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/TopBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/TopNav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/components/components.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc06666b-75d0-4562-aa95-684d8b43e6d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc06666b-75d0-4562-aa95-684d8b43e6d4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc06666b-75d0-4562-aa95-684d8b43e6d4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc06666b-75d0-4562-aa95-684d8b43e6d4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/dto/PersonalWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/QuizController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/service/QuizService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/controller/ReadingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/controller/FamiliarityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/controller/TranslateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/controller/TranslateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/dto/DictionaryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/rubish/DictionaryResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/dto/ReadingWordCn.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/dto/ReadingWordCn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/DefinitionData.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/rubish/DefinitionData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/EcdictWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/EcdictWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/FamiliarityData.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/FamiliarityData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/FamiliarityKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/FamiliarityKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/WordData.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/rubish/WordData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/WordDefKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/rubish/WordDefKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/entities/WordKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/rubish/WordKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/repository/DefinitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/rubish/DefinitionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/repository/EcdictRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/repository/EcdictRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/repository/FamiliarityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/repository/FamiliarityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/repository/WordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/rubish/WordRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/service/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/service/WordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/service/FamiliarityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/demo/service/FamiliarityService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,6 +193,7 @@
       <workItem from="1755373201167" duration="10744000" />
       <workItem from="1755465200694" duration="8625000" />
       <workItem from="1755561573154" duration="12967000" />
+      <workItem from="1756663541103" duration="5158000" />
     </task>
     <servers />
   </component>

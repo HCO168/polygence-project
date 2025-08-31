@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import com.example.demo.entities.FamiliarityData;
+import  com.example.demo.entities.FamiliarityData;
 import com.example.demo.entities.FamiliarityKey;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -19,5 +19,5 @@ public interface FamiliarityRepository extends JpaRepository<FamiliarityData, Fa
     @Query("UPDATE FamiliarityData w SET w.familiarity = :familiarity, w.last_quizzed = :last_quizzed " +
             "WHERE w.username = :username AND w.word = :word")
     void updateFamiliarityAndLast_quizzedByUsernameAndWord(String username, String word, Integer familiarity, Instant last_quizzed);
-    void
+    void createFamiliarityData(FamiliarityData familiarityData);
 }

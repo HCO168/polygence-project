@@ -42,4 +42,12 @@ public class FamiliarityService {
             return familiarityData.familiarity;
         }
     }
+    @Transactional
+    public List<FamiliarityData> getBaseFormFamiliarityDataBy(String username){
+        List<FamiliarityData> list= familiarityRepository.getFamiliarityDataByUsername(username);
+        list.stream().filter((familiarityData)->
+            familiarityData.familiarity<500
+        );
+        return list;
+    }
 }
