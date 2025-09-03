@@ -3,21 +3,21 @@ package com.example.demo.dto;
 import com.example.demo.entities.FamiliarityData;
 
 public class PersonalWord {
-    private ReadingWordCn readingWordC;
+    private ReadingWordCn readingWord;
     private FamiliarityData familiarityData;
 
     public PersonalWord(ReadingWordCn readingWordC, FamiliarityData familiarityData) {
-        this.readingWordC = readingWordC;
+        this.readingWord = readingWordC;
         this.familiarityData = familiarityData;
     }
 
 
-    public ReadingWordCn getReadingWordC() {
-        return readingWordC;
+    public ReadingWordCn getReadingWord() {
+        return readingWord;
     }
 
-    public void setReadingWordC(ReadingWordCn readingWordC) {
-        this.readingWordC = readingWordC;
+    public void setReadingWord(ReadingWordCn readingWord) {
+        this.readingWord = readingWord;
     }
 
     public FamiliarityData getFamiliarityData() {

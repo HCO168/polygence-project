@@ -28,7 +28,7 @@ public class TranslateController {
     public ReadingWordCn getDefinition(@PathVariable String word){
         return wordService.getReadingWordCnByWord(word);
     }
-    @GetMapping("/read/")
+    @PostMapping("/read/")
     public List<PersonalWord> preload(@RequestBody String text,@RequestBody String username){
         String[] textWords=text.split(" ");
         List<PersonalWord> readingWordCnList=new ArrayList<>();

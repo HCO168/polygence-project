@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.*;
 public class FamiliarityController {
     @Autowired
     FamiliarityService familiarityService;
-    @GetMapping("/{word}")
-    public Integer getFamiliarity(@RequestParam String username,@PathVariable String word){
+    FamiliarityController() {
+    }
+    FamiliarityController(FamiliarityService familiarityService) {
+        this.familiarityService = familiarityService;
+    }
+    @GetMapping()
+    public Integer getFamiliarity(@RequestParam String username,@RequestParam String word){
         return familiarityService.getFamiliarity(username,word);
     }
-    @PostMapping("/{word}")
-    public void setFamiliarity(@RequestParam String username,@PathVariable String word,@RequestParam Integer familiarity){
-        familiarityService.updateFamiliarity(username,word,familiarity);
+    @PutMapping()
+    public void setFamiliarity(@RequestParam String username,@RequestParam String word,@RequestParam Integer familiarity,@RequestParam String context){
+        familiarityService.updateFamiliarity(username,word,familiarity,context);
     }
 }

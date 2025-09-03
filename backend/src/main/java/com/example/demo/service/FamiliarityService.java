@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.dto.User;
 import com.example.demo.entities.FamiliarityData;
+import com.example.demo.entities.FamiliarityKey;
 import com.example.demo.repository.EcdictRepository;
 import com.example.demo.repository.FamiliarityRepository;
 import com.example.demo.repository.UserRepository;
@@ -23,9 +24,13 @@ public class FamiliarityService {
     }
 
     @Transactional
-    public void updateFamiliarity(String username, String word, Integer familiarity) {
+    public void updateFamiliarity(String username, String word, Integer familiarity,String context) {
         word=getBaseForm(word);
-        familiarityRepository.updateFamiliarityAndLast_quizzedByUsernameAndWord(username, word, familiarity, Instant.now());
+        if(familiarityRepository.existsById(new FamiliarityKey(username,word))){
+            familiarityRepository.updateFamiliarityAndLast_quizzedByUsernameAndWord(username, word, familiarity, Instant.now());
+        }else{
+            familiarityRepository.save(new FamiliarityData(username,word,familiarity,Instant.now(),context));
+        }
     }
     @Transactional
     public FamiliarityData getFamiliarityData(String username, String word) {
